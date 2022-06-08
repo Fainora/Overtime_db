@@ -1,0 +1,75 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font: 1.1em "Garamond", serif;
+    background-color: #FEFBE7;
+    height: 99%;
+}
+
+input {
+height: 20px;
+margin: 1px;
+
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+    padding: 5px;
+    min-width: 750px;
+    height: 90%;
+}
+
+#form {
+    box-shadow: 5px 5px 5px #94a5c0;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.overtime {
+    background-color: #F9EBC8;
+}
+
+.calculate {
+    background-color: #A0BCC2;
+}
+
+
+.full{
+    background-color: #DAE5D0;
+}
+
+#submit, #equal, #save, #reload {
+    padding: 5px;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+#equal {
+    width: 30px;
+    height: 30px;
+}
+#calculate {
+    height: 20px;
+}
+
+.gray {
+    color: gray;
+}
+
+.reload { 
+    transform: rotate(90deg);
+    width: 35px;
+    height: 35px;
+}
+
+.delete {
+    float: right;
+    /* outline: none;
+    border: 0;
+    background: transparent; */
+}
