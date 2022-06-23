@@ -1,0 +1,58 @@
+html,
+body {
+    background-color: #FEFBE7;
+    color: #111111;
+}
+
+::-webkit-scrollbar {
+    background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b2c0d8;
+}
+
+nav {
+    background-color: #94a5c0;
+}
+
+.home {
+    background-color: #8599b8;
+}
+
+.theme-button {
+    background-color: #94a5c0;
+}
+
+.theme-button:hover, .view:hover  {
+    background-color: #9eb2d1;
+}
+
+.theme-button img {
+    filter: invert(0%);
+}
+
+#form {
+    box-shadow: 5px 5px 5px #94a5c0;
+}
+
+#form input {
+    background-color: #fcdbaa;
+}
+
+#submit {
+    border: 1px solid #818172;
+    background-color: #F9EBC8;
+}
+
+.overtime {
+    background-color: #F9EBC8;
+}
+
+.calculate {
+    background-color: #A0BCC2;
+}
+
+.full {
+    background-color: #DAE5D0;
+}

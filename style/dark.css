@@ -1,0 +1,61 @@
+html,
+body {
+    background: #121212;
+    color: #cfcfc7;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #8b8b8b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #393939;
+}
+
+nav {
+    background: #272727;
+    color: #f4f4f4;
+}
+
+a{
+    color: #f4f4f4;
+}
+
+.home {
+    background-color: #1E1E1E;
+}
+
+.theme-button {
+    background: #272727;
+}
+
+.theme-button:hover, .view:hover {
+    background: #383838;
+}
+
+.theme-button img {
+    filter: invert(100%);
+}
+
+#form {
+    box-shadow: none;
+}
+
+#form input, #submit {
+    background-color: #2e2e2e;
+    color: #cfcfc7;
+}
+
+#submit {
+    border: 1px solid #81817c;
+    background-color: #272727;
+}
+
+#submit:hover {
+    background-color: #383838;
+}
+
+.overtime, .calculate, .full {
+    background-color: #1E1E1E;
+}

@@ -1,15 +1,34 @@
 <?php 
+    session_start();
     include_once 'connect.php';
+
+    if(!isset($_SESSION["theme"])) {
+        $_SESSION["theme"] = "light";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/<?=$_SESSION["theme"]; ?>.css" id="theme-link">
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/63dc98c7d4.js" crossorigin="anonymous"></script>
 </head>
-
+<nav>
+    <div class="home">
+        <a href="index.php">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+    </div>
+    <div class="view">
+        <a href="/">Посмотреть записи</a>
+    </div>
+    <div class="theme-button" id="theme-button">
+        <img src="day-and-night.png">
+    </div>
+</nav>
 <body>
     <div class="wrapper">
         <div class="overtime" id="form">
@@ -40,51 +59,8 @@
         </div>
     </div>
 
-    <script>
-    $('#submit').on('click', function() {
-        var the_date = $('#the_date').val();
-        var rclsrv = $('#rclsrv').val();
-        var set_out = $('#set_out').val();
-        var start_at = $('#start_at').val();
-        var end_at = $('#end_at').val();
-        var home = $('#home').val();
-
-        $.ajax({
-            url: "db.php",
-            type: "POST",
-            dataType: "html",
-            data: {
-                the_date: the_date,
-                rclsrv: rclsrv,
-                set_out: set_out,
-                start_at: start_at,
-                end_at: end_at,
-                home: home
-            },
-            success: function(result) {
-                if (result) {
-                    $("#conclusion").load("reload.php");
-                    $("#conclusion1").load("reload_calc.php");
-                    console.log(result);
-                } else {
-                    alert(result.message);
-                }
-                return false;
-            },
-            error: function(xhr, error) {
-                console.debug(xhr);
-                console.debug(error);
-            }
-        });
-        return false;
-    });
-    
-    /*
-    $('#reload').on('click', function() {
-        $("#conclusion").load("reload.php");
-    });
-    */
-    </script>
+    <script src="scripts/ajax.js"></script>
+    <script src="scripts/themes.js"></script>
 </body>
 
 </html>
