@@ -1,5 +1,5 @@
 <?php 
-include_once 'connect.php';
+include_once 'db/connect.php';
 
 $query = "SELECT `final_time` FROM `$table` ORDER BY `the_date` ASC";
 

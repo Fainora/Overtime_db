@@ -5,9 +5,9 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    font: 1.1em "Montserrat", sans-serif;
+    font: 300 1.1em "Montserrat", sans-serif;
     background-color: #FEFBE7;
-    font-weight: 300;
+    background-image: url("../image/background.png");
 }
 
 ::-webkit-scrollbar {
@@ -19,33 +19,40 @@ a {
     color: #111111;
 }
 
+input {
+    height: 20px;
+    margin: 1px;
+}
+
+/* Navbar */
+
 nav {
     height: 60px;
     background-color: #b1b1b1;
     display: flex;
-    align-items: center;
 }
 
-.home {
+.menu {
     height: 100%;
-    width: 150px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.home {
+    width: 150px;
+}
+
 .view {
-    height: 100%;
     padding: 0 20px;
-    display: flex;
-    align-items: center;
 }
 
 .theme-button {
     position: absolute;
     display: block;
+    top: 5px;
     right: 10px;
-    cursor: pointer;
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -57,18 +64,18 @@ nav {
     padding: 10px;
 }
 
-input {
-    height: 20px;
-    margin: 1px;
-}
+/* Navbar end*/
 
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    height: 85%;
     margin: 10px;
     padding: 5px;
-    min-width: 750px;
-    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.block {
+    width: 360px;
 }
 
 #form {

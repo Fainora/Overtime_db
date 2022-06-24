@@ -7,7 +7,7 @@ $('#submit').on('click', function() {
     var home = $('#home').val();
 
     $.ajax({
-        url: "db.php",
+        url: "db/db.php",
         type: "POST",
         dataType: "html",
         data: {
