@@ -1,61 +1,29 @@
 <?php 
-    session_start();
-    include_once 'db/connect.php';
+$PageTitle = 'Главная';
+include_once 'header.php'; ?>
 
-    if(!isset($_SESSION["theme"])) {
-        $_SESSION["theme"] = "light";
-    }
-?>
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/<?=$_SESSION["theme"]; ?>.css" id="theme-link">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/63dc98c7d4.js" crossorigin="anonymous"></script>
-</head>
-<nav>
-    <div class="menu home">
-        <a href="index.php">
-            <i class="fa-solid fa-house"></i> Home
-        </a>
+<div class="wrapper">
+    <div class="block overtime" id="form">
+        <form method="POST">
+            Дата: <input type="date" name ="the_date" id="the_date" min="2022-01-01"></br>
+            RCLSRV-<input type="text" name ="rclsrv" id="rclsrv"></br>
+            Выехал: <input type="time" name ="set_out" id="set_out"></br>
+            Начал: <input type="time" name ="start_at" id="start_at"></br>
+            Закончил: <input type="time" name ="end_at" id="end_at"></br>
+            До дома: <input type="number" name="home" id="home" min="0" /> мин</br>
+            <button type="submit" id="submit" class="submit">Добавить</button>
+        </form>
     </div>
-    <div class="menu view">
-        <a href="/">Посмотреть записи</a>
-    </div>
-    <div class="menu theme-button" id="theme-button">
-        <img src="image/day-and-night.png">
-    </div>
-</nav>
-<body>
-    <div class="wrapper">
-        <div class="block overtime" id="form">
-            <div action="#" method="POST">
-                Дата: <input type="date" name ="the_date" id="the_date" min="2022-01-01"></br>
-                RCLSRV-<input type="text" name ="rclsrv" id="rclsrv"></br>
-                Выехал: <input type="time" name ="set_out" id="set_out"></br>
-                Начал: <input type="time" name ="start_at" id="start_at"></br>
-                Закончил: <input type="time" name ="end_at" id="end_at"></br>
-                До дома: <input type="number" name="home" id="home" min="0" /> мин</br>
-                <button type="submit" id="submit">Добавить</button>
-            </div>
-        </div>
 
-        <div class="block full" id="form">
-            <div id="conclusion">
-                <?php include_once 'reload.php';?>                
-            </div>
-        </div>
-
-        <div class="block calculate" id="form">
-            <div id="conclusion1"><?php include_once 'reload_calc.php';?></div>
+    <div class="block full" id="form">
+        <div id="conclusion">
+            <?php include_once 'reload.php';?>                
         </div>
     </div>
 
-    <script src="scripts/ajax.js"></script>
-    <script src="scripts/themes.js"></script>
-</body>
-
-</html>
+    <div class="block calculate" id="form">
+        <div id="conclusion1"><?php include_once 'reload_calc.php';?></div>
+    </div>
+</div>
+<script src="scripts/ajax.js"></script>
+<?php include_once 'footer.php'; ?>

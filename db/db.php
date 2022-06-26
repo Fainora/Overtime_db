@@ -9,7 +9,7 @@ $start_at = $_POST['start_at'];
 $end_at = $_POST['end_at'];
 $home = intval($_POST['home']);
 
-if(isset($the_date) && isset($rclsrv) && isset($set_out) && isset($start_at) && isset($end_at)) {
+if(!empty($the_date) && !empty($rclsrv) && !empty($set_out) && !empty($start_at) && !empty($end_at)) {
     $set_out_min = new DateTime($set_out);
     $start_at_min = new DateTime($start_at);
     $end_at_min = new DateTime($end_at);

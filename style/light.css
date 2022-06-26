@@ -56,3 +56,9 @@ nav {
 .full {
     background-color: #DAE5D0;
 }
+
+/* View page */
+.container {
+    background-color: #F9EBC8;
+    box-shadow: 5px 5px 5px #94a5c0;
+}

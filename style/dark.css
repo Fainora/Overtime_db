@@ -38,7 +38,7 @@ a{
     filter: invert(100%);
 }
 
-#form {
+#form, .container {
     box-shadow: none;
 }
 
@@ -47,7 +47,7 @@ a{
     color: #cfcfc7;
 }
 
-#submit {
+.submit {
     border: 1px solid #81817c;
     background-color: #272727;
 }
@@ -56,6 +56,10 @@ a{
     background-color: #383838;
 }
 
-.overtime, .calculate, .full {
+.overtime, .calculate, .full, .container {
     background-color: #1E1E1E;
+}
+
+.container {
+    color: #a7a7a7;
 }
