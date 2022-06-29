@@ -1,7 +1,7 @@
 <?php 
 include_once 'db/connect.php';
 
-$query = "SELECT * FROM `$table` ORDER BY `the_date` ASC";
+$query = "SELECT * FROM `$table` ORDER BY `the_date`, `set_out` ASC";
 if ($stmt = $conn->query($query)) {
     while ($row = $stmt->fetch_assoc()) {
         echo date("d.m.Y", strtotime($row['the_date'])) . "<br>";

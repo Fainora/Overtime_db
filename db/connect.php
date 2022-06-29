@@ -6,7 +6,7 @@ if ($conn->connect_error) {
    die("Ошибка подключения: " . $conn->connect_error);
 }
 
-$sql_db = "CREATE DATABASE IF NOT EXISTS $db";
+$sql_db = "CREATE DATABASE IF NOT EXISTS `$db`";
 $db_create = $conn->query($sql_db);
 /*
 if ($db_create === TRUE) {
@@ -17,7 +17,7 @@ if ($db_create === TRUE) {
 */
 $conn->select_db($db);
 $table = date("M");
-$sql_table = "CREATE TABLE IF NOT EXISTS $table (
+$sql_table = "CREATE TABLE IF NOT EXISTS `$table` (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     the_date DATE NOT NULL,
     rclsrv VARCHAR(255) NOT NULL,

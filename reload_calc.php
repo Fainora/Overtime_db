@@ -1,7 +1,7 @@
 <?php 
 include_once 'db/connect.php';
 
-$query = "SELECT `final_time` FROM `$table` ORDER BY `the_date` ASC";
+$query = "SELECT `final_time` FROM `$table` ORDER BY `the_date`, `set_out` ASC";
 
 echo 'Итоговое время: <br>';
 if ($result = $conn->query($query)) {
