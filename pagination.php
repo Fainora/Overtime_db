@@ -17,7 +17,7 @@ if($page > $count_page) {
 }
 $start = ($page - 1) * $per_page;
 
-$stmt = $conn->query("SELECT * FROM `$table` ORDER BY `the_date`, `set_out` ASC LIMIT $start, $per_page");
+$query = "SELECT * FROM `$table` ORDER BY `the_date`, `set_out` ASC LIMIT $start, $per_page";
 
 if($count_page > 1) {
     echo "<div class='pagination'>";
